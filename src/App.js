@@ -1,12 +1,7 @@
 Ext.Loader.setConfig({ enabled: false, });
 
-var grid = new demo.view.FileView({
-  id: 'grid1',
-  region: 'east'
-});
-
 Ext.application({
-  name: 'demo', // creates namespace
+  name: 'demo',
   models: [ 'File' ],
   controllers: [ 'FileSystemPage' ],
   launch: function() {
