@@ -12,11 +12,8 @@ Ext.define('demo.controller.FileSystemPage', {
     selectors = {};
     selectors[tree] = {
       select: function(rowModel, record, index, opts) {
-        var grid = this.getGrid();
-        grid.loadFiles(this.getFolderContents(record.data.text));
-        grid.doStuff();
-      },
-      itemclick: function() { console.log('test'); }
+        this.getGrid().loadFiles(this.getFolderContents(record.data.text));
+      }
     };
 
     this.control(selectors);
