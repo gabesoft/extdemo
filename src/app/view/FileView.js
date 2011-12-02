@@ -3,18 +3,8 @@ Ext.define('demo.view.FileView', {
   alias: 'widget.fileview',
 
   initComponent: function() {
-    var store = Ext.create('demo.data.FileStore', { 
-      proxy: {
-        type: 'memory',
-        reader: {
-          type: 'json',
-          root: 'root'
-        }
-      }
-    });
-
     Ext.apply(this, { 
-      store: store,
+      store: Ext.create('store.filestore'),
       columns: [
         { text: 'name', dataIndex: 'name' },
         { text: 'path', dataIndex: 'path' },

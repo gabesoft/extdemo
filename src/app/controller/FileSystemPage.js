@@ -39,6 +39,6 @@ Ext.define('demo.controller.FileSystemPage', {
       ]
     };
 
-    return data[folder];
+    return data[folder] || [];
   }
 });

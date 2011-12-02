@@ -1,0 +1,6 @@
+NERD_tree_*
+build/*
+*.log
+temp
+out*.doc
+.topcgen.yml
