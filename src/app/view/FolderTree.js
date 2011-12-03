@@ -3,24 +3,8 @@ Ext.define('demo.view.FolderTree', {
   alias: 'widget.foldertree',
 
   initComponent: function() {
-    var store = Ext.create('Ext.data.TreeStore', {
-      root: {
-        expanded: true,
-        children: [
-          { text: "empty1", leaf: false },
-          { text: "parent", 
-            expanded: true, 
-            children: [
-              { text: "foo", leaf: false },
-              { text: "bar", leaf: false}
-            ] },
-            { text: "empty2", leaf: false }
-        ]
-      }
-    });
-
     Ext.apply(this, { 
-      store: store,
+      store: Ext.create('store.folderstore'),
       multiSelect: true
     });
     this.callParent();
